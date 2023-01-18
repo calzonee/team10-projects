@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1b1b32;
+            color: #f5f6f7;
+        }
+
+        .task-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 1px solid white;
+            padding: 20px;
+            width: 80%;
+        }
+
+        .task-form{
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        select, 
+        input[type="date"],
+        textarea{
+            background-color: #0a0a23;
+            border: 1px solid #0a0a23;
+            color: #ffffff;
+            /* change calendar color */
+            color-scheme: dark;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="task-container">
+        <form action="" class="task-form">
+            <!-- <fieldset> -->
+                <input type="text" placeholder="Title" style="font-size: 24px;"><br>
+
+                <label for="user">User:</label>
+                <select name="username" id="username">
+                    <option value="select">--select user--</option>
+                    <option value="S">Sena</option>
+                    <option value="L">Lea</option>
+                    <option value="N">Najm</option>
+                    <option value="K">Knut</option>
+                    <option value="Ü">Ümit</option>
+                    <option value="A">Peyman</option>
+                    <option value="P">Pablo</option>
+                </select><br>
+
+                <label for="date">Deadline:</label>
+                <input type="date"><br>
+
+                <label for="description">Description:</label>
+                <textarea name="" id="" cols="20" rows="3"></textarea>
+                <!-- </fieldset> -->
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 40px;
+            box-sizing: border-box;
+            border-bottom: 1px solid grey;
+            width: 100%;
+        }
+
+        .list-container, .add{
+            margin: 25px 50px;
+        }
+
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, tr, td{
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .add{
+            border: 1px solid black;
+            width: 50%;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Todo App</h1>
+        <a href="">Team Website</a>
+    </div>
+    <div class="list-container">
+        <div class="list-top">
+            <select name="" id="">
+                <option value="">Alle</option>
+                <option value="">Sena</option>
+                <option value="">Najm</option>
+            </select>
+        </div>
+        <div class="list">
+            <table>
+                <tr>
+                  <th>Aufgabe</th>
+                  <th>Deadline</th>
+                  <th>Person</th>
+                  <th>Notiz</th>
+                  <th>Erledigt</th>
+                </tr>
+                <tr>
+                  <td>x</td>
+                  <td>x</td>
+                  <td>x</td>
+                  <td>x</td>
+                  <td><input type="checkbox" name="done" id="done"></td>
+                </tr>
+              </table>
+        </div>
+    </div>
+    <div class="task-container">
+        <form action="" class="task-form">
+            <!-- <fieldset> -->
+                <input type="text" placeholder="Title" style="font-size: 24px;"><br>
+
+                <label for="user">User:</label>
+                <select name="username" id="username">
+                    <option value="select">--select user--</option>
+                    <option value="S">Sena</option>
+                    <option value="L">Lea</option>
+                    <option value="N">Najm</option>
+                    <option value="K">Knut</option>
+                    <option value="Ü">Ümit</option>
+                    <option value="A">Peyman</option>
+                    <option value="P">Pablo</option>
+                </select><br>
+
+                <label for="date">Deadline:</label>
+                <input type="date"><br>
+
+                <label for="description">Description:</label>
+                <textarea name="" id="" cols="20" rows="3"></textarea>
+                <!-- </fieldset> -->
+        </form>
+    </div>
+</body>
+</html>

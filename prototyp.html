@@ -12,6 +12,15 @@
             font-family: sans-serif;
         }
 
+        body{
+            display: block;
+            /* justify-content: center;
+            align-items: center; */
+            height: 100vh;
+            background-color: #1b1b32;
+            color: #f5f6f7;
+        }
+
         .header{
             display: flex;
             justify-content: space-between;
@@ -22,7 +31,14 @@
             width: 100%;
         }
 
-        .list-container, .add{
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .list-container{
             margin: 25px 50px;
         }
 
@@ -37,12 +53,43 @@
             padding: 8px;
         }
 
-        .add{
-            border: 1px solid black;
-            width: 50%;
+        .task-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 1px solid white;
+            padding: 20px;
         }
 
-        
+        .task-form{
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        select, 
+        input[type="date"],
+        textarea{
+            background-color: #0a0a23;
+            border: 1px solid #0a0a23;
+            color: #ffffff;
+            /* change calendar color */
+            color-scheme: dark;
+        }
+
+        .btn{
+            height: 30px;
+            background-color: #3b3b4f;
+            color: white;
+            border: 1px solid #f5f6f7 ;
+        }
+
+        .btn:hover{
+            background-color: #2f2f3d;
+        }
 
     </style>
 </head>
@@ -51,57 +98,65 @@
         <h1>Todo App</h1>
         <a href="">Team Website</a>
     </div>
-    <div class="list-container">
-        <div class="list-top">
-            <select name="" id="">
-                <option value="">Alle</option>
-                <option value="">Sena</option>
-                <option value="">Najm</option>
-            </select>
+
+    <div class="main">
+        <div class="list-container">
+            <div class="list-top">
+                <select name="" id="">
+                    <option value="">Alle</option>
+                    <option value="">Sena</option>
+                    <option value="">Najm</option>
+                </select>
+            </div>
+    
+            <div class="list">
+                <table>
+                    <tr>
+                      <th>Aufgabe</th>
+                      <th>Deadline</th>
+                      <th>Person</th>
+                      <th>Notiz</th>
+                      <th>Erledigt</th>
+                    </tr>
+                    <tr>
+                      <td>x</td>
+                      <td>x</td>
+                      <td>x</td>
+                      <td>x</td>
+                      <td><input type="checkbox" name="done" id="done"></td>
+                    </tr>
+                  </table>
+            </div>
         </div>
-        <div class="list">
-            <table>
-                <tr>
-                  <th>Aufgabe</th>
-                  <th>Deadline</th>
-                  <th>Person</th>
-                  <th>Notiz</th>
-                  <th>Erledigt</th>
-                </tr>
-                <tr>
-                  <td>x</td>
-                  <td>x</td>
-                  <td>x</td>
-                  <td>x</td>
-                  <td><input type="checkbox" name="done" id="done"></td>
-                </tr>
-              </table>
+    
+        <div class="task-container">
+            <form action="" class="task-form">
+                <!-- <fieldset> -->
+                    <input type="text" placeholder="Title" style="font-size: 24px;" name="title" required><br>
+    
+                    <label for="user">User:</label>
+                    <select name="username" id="username" required>
+                        <option value="select">--select user--</option>
+                        <option value="S">Sena</option>
+                        <option value="L">Lea</option>
+                        <option value="N">Najm</option>
+                        <option value="K">Knut</option>
+                        <option value="Ü">Ümit</option>
+                        <option value="A">Peyman</option>
+                        <option value="P">Pablo</option>
+                    </select><br>
+    
+                    <label for="date">Deadline:</label>
+                    <input type="date" name="date" required><br>
+    
+                    <label for="description">Description:</label>
+                    <textarea name="description" id="" cols="20" rows="3"></textarea><br>
+    
+                    <input type="submit" value="Submit" class="btn">
+                    <!-- </fieldset> -->
+            </form>
         </div>
     </div>
-    <div class="task-container">
-        <form action="" class="task-form">
-            <!-- <fieldset> -->
-                <input type="text" placeholder="Title" style="font-size: 24px;"><br>
 
-                <label for="user">User:</label>
-                <select name="username" id="username">
-                    <option value="select">--select user--</option>
-                    <option value="S">Sena</option>
-                    <option value="L">Lea</option>
-                    <option value="N">Najm</option>
-                    <option value="K">Knut</option>
-                    <option value="Ü">Ümit</option>
-                    <option value="A">Peyman</option>
-                    <option value="P">Pablo</option>
-                </select><br>
-
-                <label for="date">Deadline:</label>
-                <input type="date"><br>
-
-                <label for="description">Description:</label>
-                <textarea name="" id="" cols="20" rows="3"></textarea>
-                <!-- </fieldset> -->
-        </form>
-    </div>
 </body>
 </html>

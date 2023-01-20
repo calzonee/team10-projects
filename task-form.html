@@ -54,10 +54,10 @@
     <div class="task-container">
         <form action="" class="task-form">
             <!-- <fieldset> -->
-                <input type="text" placeholder="Title" style="font-size: 24px;"><br>
+                <input type="text" placeholder="Title" style="font-size: 24px;" name="title" required><br>
 
                 <label for="user">User:</label>
-                <select name="username" id="username">
+                <select name="username" id="username" required>
                     <option value="select">--select user--</option>
                     <option value="S">Sena</option>
                     <option value="L">Lea</option>
@@ -69,10 +69,12 @@
                 </select><br>
 
                 <label for="date">Deadline:</label>
-                <input type="date"><br>
+                <input type="date" name="date" required><br>
 
                 <label for="description">Description:</label>
-                <textarea name="" id="" cols="20" rows="3"></textarea>
+                <textarea name="description" id="" cols="20" rows="3"></textarea>
+
+                <input type="submit" value="Submit">
                 <!-- </fieldset> -->
         </form>
     </div>

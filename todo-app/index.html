@@ -5,132 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-        }
-
-        body{
-            display: block;
-            /* justify-content: center;
-            align-items: center; */
-            height: 100vh;
-            background-color: #1b1b32;
-            color: #f5f6f7;
-        }
-
-        .header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 40px;
-            box-sizing: border-box;
-            border-bottom: 1px solid grey;
-            width: 100%;
-        }
-
-        a{
-            color: white;
-            text-decoration: none;
-        }
-
-        a:hover{
-            text-shadow: 0px 0px 5px white;
-        }
-
-        .main{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .list-container{
-            margin: 25px 50px;
-        }
-
-        .list-top{
-            margin-bottom: 10px;
-        }
-
-        table{
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-
-        th, tr, td{
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        .task-container, .delete{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            border: 1px solid white;
-            padding: 20px;
-        }
-
-        .task-form{
-            display: flex;
-            justify-content: center;
-            align-items: left;
-            flex-direction: column;
-        }
-
-        input[type="text"],
-        select, 
-        input[type="date"],
-        textarea{
-            background-color: #0a0a23;
-            border: 1px solid #0a0a23;
-            color: #ffffff;
-            /* change calendar color */
-            color-scheme: dark;
-        }
-
-        .btn{
-            height: 30px;
-            background-color: #3b3b4f;
-            color: white;
-            border: 1px solid #f5f6f7 ;
-            padding: 4px;
-        }
-
-        .btn:hover{
-            background-color: #2f2f3d;
-        }
-
-        .delete{
-            margin: 20px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="header">
         <h1>Todo App</h1>
-        <a href="">Team Website</a>
+        <a href="../team-ten-homepage/index.html">Team Website</a>
     </div>
 
     <div class="main">
         <div class="list-container">
             <div class="list-top">
-                <select name="" id="">
-                    <option value="">Alle</option>
-                    <option value="S">Sena</option>
-                    <option value="L">Lea</option>
-                    <option value="N">Najm</option>
-                    <option value="K">Knut</option>
-                    <option value="U">Ümit</option>
-                    <option value="A">Peyman</option>
-                    <option value="P">Pablo</option>
-                </select>
-                <input type="submit" value="Filtern" class="btn">
+                <form action="">
+                <!-- <form action="./cgi-bin/aufgaben_filtern.sh"> -->
+                    <select name="filtern" id="filtern">
+                        <option value="Alle">Alle</option>
+                        <option value="Sena">Sena</option>
+                        <option value="Lea">Lea</option>
+                        <option value="Najm">Najm</option>
+                        <option value="Knut">Knut</option>
+                        <option value="Ümit">Ümit</option>
+                        <option value="Ali">Ali</option>
+                        <option value="Pablo">Pablo</option>
+                    </select>
+                    <input type="submit" value="Filtern" class="btn">
+                </form>
+                <a href="./gefiltert.html" target="_blank" rel="noopener noreferrer"><button>Gefilterte Liste</button></a>
+                <a href="./gefiltert.html" target="_blank" rel="noopener noreferrer"><button>Erledigte Aufgaben</button></a>
             </div>
     
             <div class="list">

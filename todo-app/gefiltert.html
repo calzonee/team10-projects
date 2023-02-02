@@ -7,7 +7,11 @@
     <title>Gefiltert</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body{
+        .back{
+            height: 20vh;
+        }
+
+        .list{
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -16,8 +20,11 @@
     </style>
 </head>
 <body>
-    <h1>Gefilterte Aufgaben</h1><br>
+    <div class="back">
+        <a href="./index.html" target="_blank" rel="noopener noreferrer">Zürck zur </a>
+    </div>
     <div class="list">
+        <h1>Gefilterte Aufgaben</h1>
         <table>
             <tr>
                 <th>Aufgabe</th>
@@ -35,5 +42,6 @@
               </tr>
         </table>
     </div>
+
 </body>
 </html>

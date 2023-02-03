@@ -15,12 +15,14 @@ body{
 
 a{
     text-decoration: none;
+    border: 1px solid #fff;
+    padding: 4px;
     color: #ffffff;
 }
 
 /* Effekt wenn die Maus über einen Link geht */
 a:hover{
-    color: aqua;
+    text-decoration: underline;
 }
 
 .left{

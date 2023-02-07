@@ -80,6 +80,8 @@ a:hover{
     padding: 25px;
     max-width: 300px;
     border-radius: 12px;
+    text-align: center;
+    color-scheme: dark;
     background-color: #0d0d18;
 }
 
@@ -148,4 +150,23 @@ input:hover{
     width: 140px;
     padding: 60px 20px;
     border-radius: 12px;
+}
+
+.first-last-ship{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.first-last-ship img{
+    width: 200px;
+}
+
+.first-ship, .last-ship{
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid #ffffff;
+    width: 250px;
+    text-align: center;
 }
